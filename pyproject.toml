@@ -1,0 +1,21 @@
+[project]
+name = "eng_requisitos"
+version = "0.1.0"
+description = "eng_requisitos using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools,anthropic]>=1.15.40,<2.0.0"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+only-include = ["agents", "crew.jsonc", "tools", "knowledge", "skills"]
+
+[tool.crewai]
+type = "crew"
+definition = "crew.jsonc"
+project_id = "7d574e0e-21a9-4247-9a36-e380a0732616"
