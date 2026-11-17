@@ -1,20 +1,32 @@
 # eng_requisitos
 
-A crewAI project using JSON-first configuration.
+A CrewAI project using JSON-first configuration.
 
-## Running
+## Prerequisites
 
-```bash
+Make sure you have Python (3.10 or higher) installed on your system.
+
+## How to Run
+
+Follow these steps in your terminal to set up the virtual environment, install dependencies, and run your crew:
+
+### 1. Create and activate the virtual environment (`venv`)
+´´´
+python3 -m venv .venv
+source .venv/bin/activate
+´´´
+
+### 2. Install dependencies
+´´´
+pip install -r requirements.txt
+´´´
+
+### 3. Create a .env
+´´´
+GEMINI_API_KEY=your_actual_api_key_here
+´´´
+
+### 4. Run Crew
+´´´
 crewai run
-```
-
-## Project Structure
-
-- `agents/` - Agent definitions (JSONC)
-- `crew.jsonc` - Crew definition with tasks and configuration
-- `tools/` - Custom tools (Python)
-- `knowledge/` - Knowledge files for agents
-
-> **Note:** `custom:<name>` tool references execute `tools/<name>.py` as local
-> Python code when the crew loads. Only run crew projects from sources you
-> trust.
+´´´
