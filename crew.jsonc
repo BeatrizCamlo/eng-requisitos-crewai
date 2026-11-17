@@ -6,12 +6,19 @@
   "agents": ["engenheiro_de_requisitos", "analista_de_requisitos"],
 
   // Task definitions — executed in order for sequential process
+
   "tasks": [
     {
-      "name": "leia_o_documento_de_task",
-      "description": "Leia o arquivo de requisitos e analise os critérios de requisitos, verificando se está de acordo com o IEEE e o Volaire, e com a negociação recente do stakeholder.",
-      "expected_output": "Um relatório detalhado e estruturado em Markdown descrevendo os requisitos após a análise, seus contextos e o alinhamento com o IEEE e o Volaire.",
-      "output_file": "output/requisitos.md",
+      "name": "elicitação_dos_seis_chapeus",
+      "description": "Leia o arquivo de descrição do sistema e realize a técnica de elicitação dos Seis Chapéus do Pensamento.",
+      "expected_output": "Um relatório detalhado e estruturado em Markdown descrevendo os requisitos após a análise dos chapéus de De Bono, seus contextos e a justificativa de cada resultado. Pontue os requisitos funcionais, não funcionais, regras de negócio e restrições do sistema analisado.",
+      "output_file": "output/analise-requisitos.md",
+      "agent": "analista_de_requisitos"
+    },
+    {
+      "name": "verificação_dos_requisitos",
+      "description": "Leia o arquivo output/analise-requisitos.md e analise os critérios de requisitos, verificando se está de acordo com o IEEE e o Volaire",
+      "expected_output": "Um documento de requisitos em Markdown, estruturado de acordo com os padrões IEEE e Volaire, contendo os requisitos e seus contextos do sistema analisado.",
       "agent": "engenheiro_de_requisitos"
     }
 

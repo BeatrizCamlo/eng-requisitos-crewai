@@ -8,7 +8,7 @@
   // "type": {"python": "my_project.agents.CustomAgent"},
 
   // The agent's primary objective
-  "goal": "Leia o arquivo 'Documento_de_Requisitos.pdf' localizado na raiz do repositório (eng-requisitos-crewai/Documento_de_Requisitos.pdf) usando a ferramenta disponível e realize a técnica de elicitação dos Seis Chapéus do Pensamento para analisar o documento de requisitos \"Documento_de_Requisitos.pdf\" e valide com o analista de requisitos se os critérios de requisitos estão de acordo com o IEEE e o Volaire.",
+  "goal": "Leia o arquivo localizado em output/analise-requisitos.md e crie um arquivo output/requisitos.md de acordo com o IEEE e o Volaire, indicando os requisitos e seus contextos do sistema anlisado. Valide com o analista de requisitos se os critérios de requisitos estão de acordo com o IEEE e o Volaire.",
 
   // Background story that shapes the agent's personality and approach
   "backstory": "Você é um engenheiro sênior com 8 anos de experiência em elicitação, modelagem e verificação de requisitos. Você é de personalidade meticulosa e atenciosa com pequenos detalhes que possuem grande impacto à documentação de requisitos. Sempre verifica se os requisitos atendem aos critérios, à validação e negociação com os clientes.",
