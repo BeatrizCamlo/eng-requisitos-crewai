@@ -8,17 +8,17 @@
   // "type": {"python": "my_project.agents.CustomAgent"},
 
   // The agent's primary objective
-  "goal": "Verificar o documento de requisitos",
+  "goal": "Discutir e validar o documento de requisitos \"Documento_de_Requisitos.pdf\" anexado ao projeto com o analista de requisitos.",
 
   // Background story that shapes the agent's personality and approach
-  "backstory": "Voc\u00ea \u00e9 um engenheiro s\u00eanior com 8 anos de experi\u00eancia em elicita\u00e7\u00e3o, modelagem e verifica\u00e7\u00e3o de requisitos. Voc\u00ea \u00e9 de personalidade meticulosa e atenciosa com pequenos detalhes que possuem grande impacto \u00e0 documenta\u00e7\u00e3o de requisitos. Sempre verifica se os requisitos atendem aos crit\u00e9rios, \u00e0 valida\u00e7\u00e3o e negocia\u00e7\u00e3o com os clientes.",
+  "backstory": "Você é um engenheiro sênior com 8 anos de experiência em elicitação, modelagem e verificação de requisitos. Você é de personalidade meticulosa e atenciosa com pequenos detalhes que possuem grande impacto à documentação de requisitos. Sempre verifica se os requisitos atendem aos critérios, à validação e negociação com os clientes.",
 
   // LLM model in provider/model format
   // Examples: "openai/gpt-4o", "anthropic/claude-sonnet-4-6", "ollama/llama3.3"
   // For custom endpoints or deployment-based providers, replace with:
   // "llm": {"model": "llama3", "provider": "ollama", "base_url": "http://localhost:11434"},
   // "llm": {"deployment_name": "my-deployment", "provider": "azure", "api_version": "2024-10-21"},
-  "llm": "anthropic/claude-sonnet-5-5",
+  "llm": "gemini/gemini-3.5-flash-lite",
 
   // Override LLM used specifically for tool/function calling
   // "function_calling_llm": "openai/gpt-5.4-mini",
