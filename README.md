@@ -11,22 +11,22 @@ Make sure you have Python (3.10 or higher) installed on your system.
 Follow these steps in your terminal to set up the virtual environment, install dependencies, and run your crew:
 
 ### 1. Create and activate the virtual environment (`venv`)
-´´´
+```
 python3 -m venv .venv
 source .venv/bin/activate
-´´´
+```
 
 ### 2. Install dependencies
-´´´
+```
 pip install -r requirements.txt
-´´´
+```
 
 ### 3. Create a .env
-´´´
+```
 GEMINI_API_KEY=your_actual_api_key_here
-´´´
+```
 
 ### 4. Run Crew
-´´´
+```
 crewai run
-´´´
+``
