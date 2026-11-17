@@ -4,4 +4,4 @@ __pycache__/
 report.md
 .crewai/
 .venv/
-output/*
+output/
