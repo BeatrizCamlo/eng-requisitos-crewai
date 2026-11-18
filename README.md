@@ -16,8 +16,9 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-### 2. Install dependencies
+### 2. Install tools & dependencies
 ```
+pip install crewai crewai-tools
 pip install -r requirements.txt
 ```
 
@@ -29,4 +30,4 @@ GEMINI_API_KEY=your_actual_api_key_here
 ### 4. Run Crew
 ```
 crewai run
-``
+```

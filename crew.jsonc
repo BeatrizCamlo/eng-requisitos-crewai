@@ -8,21 +8,21 @@
   // Task definitions — executed in order for sequential process
 
   "tasks": [
-    {
-      "name": "elicitação_dos_seis_chapeus",
-      "description": "Leia o arquivo de descrição do sistema e realize a técnica de elicitação dos Seis Chapéus do Pensamento.",
-      "expected_output": "Um relatório detalhado e estruturado em Markdown descrevendo os requisitos após a análise dos chapéus de De Bono, seus contextos e a justificativa de cada resultado. Pontue os requisitos funcionais, não funcionais, regras de negócio e restrições do sistema analisado.",
-      "output_file": "output/analise-requisitos.md",
-      "agent": "analista_de_requisitos"
-    },
-    {
-      "name": "verificação_dos_requisitos",
-      "description": "Leia o arquivo output/analise-requisitos.md e analise os critérios de requisitos, verificando se está de acordo com o IEEE e o Volaire",
-      "expected_output": "Um documento de requisitos em Markdown, estruturado de acordo com os padrões IEEE e Volaire, contendo os requisitos e seus contextos do sistema analisado.",
-      "agent": "engenheiro_de_requisitos"
-    }
-
-  ],
+      {
+        "name": "elicitação_e_analise_de_requisitos",
+        "description": "Utilize a ferramenta de leitura de PDF para ler o arquivo de descrição do sistema localizado em eng-requisitos-crewai/Descricao_Sistema.pdf. Em seguida, conduza a elicitação aplicando a técnica dos **Seis Chapéus do Pensamento** a partir do contexto extraído.\n- Analise o sistema sob os chapéus de De Bono (fatos, emoções, riscos, benefícios, ideias e controle).\n- **Saída obrigatória esperada**: Achados detalhados por chapéu, perguntas/respostas simuladas (se aplicável) e as necessidades brutas levantadas para garantir insumo à rastreabilidade.",
+        "expected_output": "Um relatório consolidado em Markdown contendo a aplicação da técnica de elicitação escolhida, detalhando os achados estruturados, as necessidades mapeadas e a origem de cada ponto extraído do documento base.",
+        "output_file": "output/analise-requisitos.md",
+        "agent": "analista_de_requisitos"
+      },
+      {
+        "name": "especificacao_e_verificacao_volere",
+        "description": "Com base no relatório gerado na etapa anterior ('output/analise-requisitos.md'), atue como Engenheiro de Requisitos Sênior aplicando o template Volere .\n- Para cada requisito especificado, **o campo 'Origem' deve citar obrigatoriamente o achado da elicitação correspondente**, garantindo a rastreabilidade total de ponta a ponta.\n- Certifique-se de que os requisitos sejam atômicos, testáveis e estruturados (incluindo identificador, descrição clara, justificativa, critérios de adequação/aceitação verificáveis e prioridade).",
+        "expected_output": "Um documento final de especificação de requisitos em Markdown, estritamente alinhado ao padrão IEEE / Volere (Snow Cards), contendo todos os campos obrigatórios e a rastreabilidade rastreada diretamente para os achados da elicitação.",
+        "output_file": "output/especificacao-volere.md",
+        "agent": "engenheiro_de_requisitos"
+      }
+    ],
 
   // Execution process
   // "sequential" — tasks run in order, each receiving prior task outputs
